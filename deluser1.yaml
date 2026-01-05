@@ -5,6 +5,6 @@
   tasks:
     - name: Ensure user is absent and remove home directory
       ansible.builtin.user:
-        name: {{Username}}
+        name: "{{Username}}"
         state: absent
         remove: true
