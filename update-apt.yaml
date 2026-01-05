@@ -1,0 +1,11 @@
+---
+- name: Update all packages on Debian-based systems
+  hosts: all
+  become: yes  # Run as sudo
+  tasks:
+    - name: Update package cache
+      apt:
+        update_cache: yes
+    - name: Upgrade all packages to the latest version
+      apt:
+        upgrade: dist
