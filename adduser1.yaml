@@ -5,4 +5,4 @@
     - name: Create user with password
       ansible.builtin.user:
         name: "{{Username}}"
-        password: "{{Password}}"
+        password: "{{ Password | password_hash('sha512', 'salt') }}"
