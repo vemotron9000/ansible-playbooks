@@ -1,0 +1,10 @@
+---
+- name: user module Playbook
+  hosts: all
+  become: true
+  tasks:
+    - name: Ensure 'exampleuser' is absent and remove home directory
+      ansible.builtin.user:
+        name: user
+        state: absent
+        remove: true
