@@ -5,4 +5,4 @@
     - name: Create user with pre-hashed password
       ansible.builtin.user:
         name: "{{Username}}"
-        password: "$6$vMuQ4SqxtAdTrqUD$80pX81SYNJYx0ETspa5GjsFG7Ujx3LElcWTwNGkV0beKi.w8/hyt43s1YY5Lw2l8LMIF/AsPLbZ8prKgD0Bqq/"
+        password: "password"
