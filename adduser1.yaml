@@ -1,6 +1,6 @@
 - name: Create user with pre-hashed password
   hosts: all
-  become: yes
+  become: true
   tasks:
     - name: Create user with pre-hashed password
       ansible.builtin.user:
