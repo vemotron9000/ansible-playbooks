@@ -3,8 +3,8 @@
   hosts: all
   become: true
   tasks:
-    - name: Ensure 'exampleuser' is absent and remove home directory
+    - name: Ensure user is absent and remove home directory
       ansible.builtin.user:
-        name: user
+        name: {{Username}}
         state: absent
         remove: true
