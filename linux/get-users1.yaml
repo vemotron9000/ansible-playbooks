@@ -1,0 +1,18 @@
+# Source - https://stackoverflow.com/a
+# Posted by U880D
+# Retrieved 2026-01-05, License - CC BY-SA 4.0
+
+---
+- hosts: all
+  become: false
+  gather_facts: false
+
+  tasks:
+
+  - getent:
+      database: passwd
+      split: ':'
+
+  - name: List of user per host
+    debug:
+      msg: "{{ inventory_hostname }}: {{ getent_passwd.keys() | join(',') }}"
