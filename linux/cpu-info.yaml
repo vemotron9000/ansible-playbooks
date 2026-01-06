@@ -12,4 +12,4 @@
     - name: Display CPU
       debug:
         msg:
-          - "CPU: {{ cpu_result.stdout }}"
+          - "{{ cpu_result.stdout }}"
