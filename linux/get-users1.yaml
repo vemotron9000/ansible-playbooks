@@ -15,4 +15,4 @@
 
   - name: List of user per host
     debug:
-      msg: "{{ inventory_hostname }}: {{ getent_passwd.keys() | join(',') }}"
+      msg: "{{ inventory_hostname }}: {{ getent_passwd.keys() | join(', ') }}"
