@@ -1,4 +1,4 @@
-- name: Create user with password
+- name: Create user with password, man
   hosts: all
   become: true
   tasks:
