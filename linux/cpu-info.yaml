@@ -17,4 +17,4 @@
     - name: Display CPU Model and MHz
       debug:
         msg:
-          - "{{ cpu_result.stdout }} {{mhz_result.stdout}"
+          - "{{ cpu_result.stdout mhz_result.stdout}"
