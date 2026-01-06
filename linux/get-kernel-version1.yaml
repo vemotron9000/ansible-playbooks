@@ -13,4 +13,3 @@
       debug:
         msg:
           - "Kernel: {{ ansible_result.stdout }}"
-
