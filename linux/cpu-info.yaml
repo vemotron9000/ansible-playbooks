@@ -1,0 +1,15 @@
+---
+- name: Gets CPU Name
+  hosts: all
+  gather_facts: yes
+  tasks:
+
+    - name: Get CPU Model Name
+      command: cat /proc/cpuinfo |grep name
+      register: cpu_result
+      changed_when: false
+
+    - name: Display CPU
+      debug:
+        msg:
+          - "CPU: {{ cpu_result.stdout }}
