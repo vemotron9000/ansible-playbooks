@@ -7,7 +7,7 @@
     - name: Kernel Check
       debug:
         var: ansible_kernel
-        register: ansible_result
+      register: ansible_result
 
     - name: Display Kernel Version
       debug:
