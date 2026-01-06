@@ -1,0 +1,16 @@
+---
+- name: Test connectivity to all VMs
+  hosts: all
+  gather_facts: yes
+  tasks:
+    
+    - name: Kernel Check
+      debug:
+        var: ansible_kernel
+        register: ansible_result
+
+    - name: Display Kernel Version
+      debug:
+        msg:
+          - "Kernel: {{ ansible_result.stdout }}"
+
