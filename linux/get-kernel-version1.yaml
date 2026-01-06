@@ -3,12 +3,13 @@
   hosts: all
   gather_facts: yes
   tasks:
-    
-    - name: Kernel Check
-      debug:
-        var: ansible_kernel
+
+    - name: Get hostname
+      command: uname -a
+      register: uname_result
+      changed_when: false
 
     - name: Display Kernel Version
       debug:
         msg:
-          - "Kernel: {{ ansible_result.stdout }}"
+          - "Kernel: {{ uname_result.stdout }}"
