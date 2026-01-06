@@ -14,7 +14,7 @@
       register: mhz_result
       changed_when: false
 
-    - name: Display CPU
+    - name: Display CPU Model and MHz
       debug:
         msg:
           - "{{ cpu_result.stdout }}. {{mhz_result.stdout}"
