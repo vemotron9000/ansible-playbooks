@@ -5,7 +5,7 @@
   tasks:
 
     - name: Get CPU Model Name
-      command: cat /proc/cpuinfo |grep name
+      shell: cat /proc/cpuinfo |grep name
       register: cpu_result
       changed_when: false
 
