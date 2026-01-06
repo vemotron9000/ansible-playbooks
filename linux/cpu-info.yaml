@@ -9,7 +9,12 @@
       register: cpu_result
       changed_when: false
 
+    - name: Get CPU MHz
+      shell: cat /proc/cpuinfo |grep MHz
+      register: mhz_result
+      changed_when: false
+
     - name: Display CPU
       debug:
         msg:
-          - "{{ cpu_result.stdout }}"
+          - "{{ cpu_result.stdout }}. {{mhz_result.stdout}"
